@@ -30,6 +30,7 @@
         font-weight: bold;
         border-bottom: solid 2px transparent;
         transition: all 0.3s ease;
+        font-size: larger;
       }
 
       .hero nav a:hover {
@@ -59,6 +60,7 @@
 
       .portfolios h1 {
         font-size: 4em;
+        text-transform: uppercase;
       }
 
       .portfolios .caption {
@@ -66,6 +68,7 @@
         font-weight: lighter;
         font-weight: lighter;
         color: RGBA(81, 86, 90, 0.95);
+        margin-bottom: 2em;
       }
 
       .thumbnail p {
@@ -80,11 +83,14 @@
 
       .more-about-me h1 {
         margin-bottom: 2em;
+        text-transform: uppercase;
+        color: whitesmoke;
       }
 
       .more-about-me .btn {
         border-radius: 0;
         color: white;
+        margin: 0 15px;
       }
 
       .btn-linkedin {
@@ -112,8 +118,8 @@
       }
     </style>
   </head>
-  <body>
-    <div class='hero'>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class='hero' id="about-me-section">
       <nav class="navbar">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
@@ -127,9 +133,9 @@
             <a class="navbar-brand" href="#">Tsara</a>
           </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">More</a></li>
+            <li><a href="#about-me-section">About</a></li>
+            <li><a href="#portfolios-section">Portfolio</a></li>
+            <li><a href="#more-about-me-section">More</a></li>
           </ul>
         </div>
       </nav>
@@ -143,7 +149,7 @@
         </div>
       </div>
     </div>
-    <div class="portfolios">
+    <div class="portfolios" id="portfolios-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -184,7 +190,7 @@
         </div>
       </div>
     </div>
-    <div class="more-about-me">
+    <div class="more-about-me" id="more-about-me-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -193,19 +199,11 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div class="col-md-offset-2 col-md-12">
-              <div class="col-md-2">
-                <a href="https://github.com/tsara27" class="btn btn-lg btn-github"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
-              </div>
-              <div class="col-md-2">
-                <a href="https://id.linkedin.com/in/tsarasudrajat" class="btn btn-lg btn-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-              </div>
-              <div class="col-md-2">
-                <a href="https://twitter.com/tsara_tf" class="btn btn-lg btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
-              </div>
-              <div class="col-md-2">
-                <a href="https://www.facebook.com/tsara.tf" class="btn btn-lg btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
-              </div>
+            <div class="center-block text-center" style="width: 60%">
+                <a href="https://github.com/tsara27" class="btn btn-lg btn-github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+                <a href="https://id.linkedin.com/in/tsarasudrajat" class="btn btn-lg btn-linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                <a href="https://twitter.com/tsara_tf" class="btn btn-lg btn-twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+                <a href="https://www.facebook.com/tsara.tf" class="btn btn-lg btn-facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
             </div>
           </div>
         </div>
@@ -217,5 +215,12 @@
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+    <script type="text/javascript">
+      window.sr = ScrollReveal({ duration: 1300 });
+      sr.reveal('.portfolios');
+      sr.reveal('.thumbnail', 70);
+      sr.reveal('.btn', 50);
+    </script>
   </body>
 </html>
